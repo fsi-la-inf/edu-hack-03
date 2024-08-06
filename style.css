@@ -8,6 +8,9 @@
 
 
 
+
+/* toggle button: */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -28,18 +31,6 @@ background-color: #ccc;
 -webkit-transition: .4s;
 transition: .4s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*green
