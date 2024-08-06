@@ -1,0 +1,94 @@
+.difficulty-buttons {
+
+}
+
+.help_information_window {
+    
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {display:none;}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*green
+-----------------------------------
+*/
+.slider-green {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #9BD770;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider-green:before {
+position: absolute;
+content: "";
+height: 16.5px;
+width: 16.5px;
+left: 3px;
+bottom: 2.7px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider-green {
+background-color: #66B032;
+}
+
+input:focus + .slider-green {
+box-shadow: 0 0 1px #66B032;
+}
+
+input:checked + .slider-green:before {
+-webkit-transform: translateX(17.3px);
+-ms-transform: translateX(17.3px);
+transform: translateX(17.3px);
+}
+
+/* Rounded sliders */
+.slider-green.round {
+border-radius: 22px;
+}
+
+.slider-green.round:before {
+border-radius: 50%;
+}
+

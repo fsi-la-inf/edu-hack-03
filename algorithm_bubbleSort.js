@@ -47,6 +47,10 @@ function bubbleSort(arr, n) {
 
 
 function checkCode() {
+    if (difficulty == -1) {
+        alert("Wähle zuerst einen Schwierigkeitsgrad.")
+        return
+    }
     allow_show_solution = true
     var arr = [ 64, 34, 25, 12, 22, 11, 90 ];
     var whole_program = ""; 
@@ -82,7 +86,7 @@ function checkCode() {
     }
 
     if(JSON.stringify(arr.sort()) != JSON.stringify(arr_copy)) {
-        alert("Dein Programm sortiert das Array nicht.")
+        alert("Dein Programm sortiert das Array nicht. Die Lösung sollte " + JSON.stringify(arr.sort()) + " sein. Ihre Lösung war " + JSON.stringify(arr_copy) + ".")
     }
     else {
         alert("Glückwunsch, dein Programm sortiert das Array!")
@@ -115,6 +119,9 @@ function showSolution() {
 }
 
 function show_help_information() {
+    if (difficulty == -1) {
+        alert("Wähle zuerst einen Schwierigkeitsgrad aus.")
+    }
     if (allow_show_help_information) {
         var container = document.getElementById("help_information_window")
         container.innerHTML = ""
@@ -135,16 +142,21 @@ function setDifficulty(difficulty_new) {
 }
 
 function switch_help_information() {
-    allow_show_help_information = !allow_show_help_information
-    if (allow_show_help_information) {
-        document.getElementById("button_help_information").innerText = "Tipps verbergen"
-    } else {
-        document.getElementById("button_help_information").innerText = "Tipps anzeigen"
-    }
+    //allow_show_help_information = !allow_show_help_information
+    //if (allow_show_help_information) {
+    //    document.getElementById("button_help_information").innerText = "Tipps verbergen"
+    //} else {
+    //    document.getElementById("button_help_information").innerText = "Tipps anzeigen"
+    //}
+    allow_show_help_information = document.getElementById("checkbox_help_information").checked
     show_help_information()
 }
 
-var difficulty = 1
+function show_next_algorithm() {
+    alert("not yet implemented")
+}
+
+var difficulty = -1
 var allow_show_help_information = false
 var allow_show_solution = false
             //   [0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,0]

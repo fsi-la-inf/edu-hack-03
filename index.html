@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
 <script type="text/javascript" src="algorithm_bubbleSort.js"></script>
 <h1>Worked Examples</h1>
 <h2 id="name_algorithm">Bubble Sort</h2>
 
-<div style="width:10%; display: flex;" id="complexity-selection">
+<div class="difficulty-buttons" style="width:10%; display: flex;" id="complexity-selection">
     <button id="button_simple" onclick="setDifficulty(3)">Einfach</button>
     <button id="button_medium" onclick="setDifficulty(2)">Mittel</button>
     <button id="button_hard" onclick="setDifficulty(1)">Schwer</button>
@@ -12,12 +13,14 @@
 
 
 <div id="algorithm_section" style="display: flex;">
-    <div style="width: 20%" id="help_information_window">
+    <div class="help_information_window" style="width: 20%" id="help_information_window">
         Hier werden Tipps angezeigt
     </div>
-    <div>
-        <button id="button_help_information" onclick="switch_help_information()">Tipps anzeigen</button>
-    </div>
+    <label class="switch">
+        <input id="checkbox_help_information" type="checkbox" onclick="switch_help_information()">
+        <span class="slider-green round"></span>
+        <label>Tipps anzeigen</label>
+    </label>
 
     <div style="display: flex;">
         <div>
@@ -30,4 +33,12 @@
         </div>
     </div>
 </div>
-<button id="nextButton">nächster Algorithmus</button>
+<button id="nextButton" onclick ="show_next_algorithm()">nächster Algorithmus</button>
+
+
+
+
+
+
+  
+  
